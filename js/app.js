@@ -31,11 +31,83 @@ const question = [{
         'correct': "a"
     },
     {
-        'que': "What color was Tanjiro's Sword?",
-        'a': "Black",
-        "b": "Pink",
-        "c": "Yellow",
-        "d": "Red",
-        'correct': "a"
-    },
+        'que': "Who was Light Yagami's final opponent?",
+        'a': "L",
+        "b": "B",
+        "c": "Mello",
+        "d": "Near",
+        'correct': "d"
+    }
 ]
+
+let index = 0;
+let total = question.length;
+let right = 0,
+    wrong = 0;
+
+const quesBox = document.getElementById('quesBox');
+const optionsInput = document.querySelectorAll('.options');
+
+const loadQuestion = () => {
+    if (index === total) {
+        return endQuiz();
+    }
+
+    reset();
+
+
+    const data = question[index];
+    // console.l
+    quesBox.innerText = `${index+1}) ${data.que}`;
+    optionsInput[0].nextElementSibling.innerText = data.a;
+    optionsInput[1].nextElementSibling.innerText = data.b;
+    optionsInput[2].nextElementSibling.innerText = data.c;
+    optionsInput[3].nextElementSibling.innerText = data.d;
+}
+
+const submitQuiz = () => {
+    const data = question[index]
+    const ans = getAnswer()
+
+    if (ans === data.correct) {
+        right++;
+    } else {
+        wrong++;
+    }
+    index++;
+    loadQuestion();
+    return;
+}
+
+
+const getAnswer = () => {
+    let answer;
+    optionsInput.forEach(
+        (input) => {
+            if (input.checked) {
+                answer = input.value;
+
+            }
+        }
+    )
+    return answer;
+}
+
+const reset = () => {
+    optionsInput.forEach(
+        (input) => {
+            input.checked = false;
+        }
+    )
+}
+
+const endQuiz = () => {
+    document.getElementById("box").innerHTML = `
+    <h3>Thank you for playing quiz!!</h3>
+    <h4>${right} / ${total} are correct!!</h4>
+    `
+}
+
+
+// Initial call
+loadQuestion();
