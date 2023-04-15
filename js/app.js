@@ -102,9 +102,21 @@ const reset = () => {
 }
 
 const endQuiz = () => {
+    var gif
+    if (right == 0) {
+        gif = "./image/the-owl-house-owl-house.gif"
+    } else if (right > 0 && right < 3) {
+        gif = "./image/deathnote.gif"
+    } else {
+        gif = "image/dancing-levi-hugebacher.gif"
+    }
     document.getElementById("box").innerHTML = `
+    <div class="Result">
+    <h1>Quiz Result</h1>
     <h3>Thank you for playing quiz!!</h3>
-    <h4>${right} / ${total} are correct!!</h4>
+    <h4>${right} / ${total} are correct!!</h4> <br>
+    <img src=${gif} alt="GIF"class="center">
+    </div>
     `
 }
 
