@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 body {
-    background-image: url("../image/db34d40b271fb59477621550bf73ea0b.jpg");
+    background-image: url("../image/hollowed-boxes.svg");
     font-family: 'Poppins', sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
     width: 40%;
     /* height: 400px; */
     box-shadow: 0px 0px 5px gray;
-    background-color: bisque;
+    background-color: #a0e79d;
     border-radius: 5%;
     padding: 15px;
 }
@@ -37,12 +37,10 @@ body {
 .btn {
     width: 100%;
     padding: 5px;
-    background-color: rgb(255, 176, 79);
+    background-color: #b1cb63;
     font-size: 20px;
     color: white;
     border: none;
     box-shadow: 0px 0px 5px gray;
     border-radius: 5px;
 }
-
-.Result #h1 {}
