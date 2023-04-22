@@ -7,7 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 body {
     background-image: url("../image/hollowed-boxes.svg");
-    font-family: 'Poppins', sans-serif;
+    /* background-image: url("../image/db34d40b271fb59477621550bf73ea0b.jpg");    Previously added background */
+        font-family: 'Poppins', sans-serif;
 }
 
 .main {
