@@ -7,3 +7,10 @@
 - Result panel (with score and gifs in it)
 
 # 📸 Snapshots: 
+1) Main Page:
+
+![Main Page](https://github.com/jashkarangiya/quiz-app/blob/main/image/Main%20Page%20(1).jpg)
+
+2) Result Page:
+
+![Result Page](https://github.com/jashkarangiya/quiz-app/blob/main/image/Result%20Page.jpg)
